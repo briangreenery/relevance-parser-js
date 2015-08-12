@@ -20,7 +20,7 @@ var TOKEN_EOF = 0,
   TOKEN_GREATER_EQ = 17,
   TOKEN_GREATER = 18,
   TOKEN_BAR = 19,
-  TOKEN_NOTEQ = 20,
+  TOKEN_NOT_EQ = 20,
   TOKEN_COMMENT = 21,
   TOKEN_INVALID_CHARACTERS = 22,
   TOKEN_UNTERMINATED_STRING = 23,
@@ -181,9 +181,10 @@ Lexer.prototype.scan = function() {
       return TOKEN_BAR;
 
     case 0x21: // 0x21 is '!'
-      if (this.text.charCodeAt(this.index) === 0x3d) { // 0x3d is '='
+      if (this.index < this.length &&
+          this.text.charCodeAt(this.index) === 0x3d) { // 0x3d is '='
         this.index++;
-        return TOKEN_NOTEQ;
+        return TOKEN_NOT_EQ;
       }
 
       return TOKEN_INVALID_CHARACTERS;

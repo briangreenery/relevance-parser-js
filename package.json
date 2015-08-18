@@ -5,7 +5,8 @@
   "main": "lib/lexer.js",
   "scripts": {
     "test": "tape test/*.js",
-    "coverage": "istanbul cover tape test/*.js"
+    "coverage": "istanbul cover tape test/*.js",
+    "travis": "istanbul cover --report lcovonly tape test/*.js && cat ./coverage/lcov.info | coveralls"
   },
   "author": "BigFix",
   "license": "Apache-2.0",
@@ -14,6 +15,7 @@
     "url": "https://github.com/bigfix/relevance-parser-js.git"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
     "istanbul": "^0.3.18",
     "tape": "^4.2.0"
   }

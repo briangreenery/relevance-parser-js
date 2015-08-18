@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tape test/*.js",
     "coverage": "istanbul cover tape test/*.js",
-    "travis": "istanbul cover --report lcovonly tape test/*.js && cat ./coverage/lcov.info | coveralls"
+    "travis": "istanbul cover tape test/*.js && cat ./coverage/lcov.info | coveralls"
   },
   "author": "BigFix",
   "license": "Apache-2.0",

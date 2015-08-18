@@ -4,12 +4,17 @@
   "description": "A parser for the BigFix Relevance Language.",
   "main": "lib/lexer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/*.js",
+    "coverage": "istanbul cover tape test/*.js"
   },
   "author": "BigFix",
   "license": "Apache-2.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/bigfix/relevance-parser-js.git"
+    "type": "git",
+    "url": "https://github.com/bigfix/relevance-parser-js.git"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.18",
+    "tape": "^4.2.0"
   }
 }

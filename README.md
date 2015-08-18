@@ -3,3 +3,15 @@
 # Relevance Parser JS
 
 A parser for the BigFix Relevance Language. This is a work in progress and does not currently work.
+
+## Running the tests
+
+To run the tests:
+
+    $ npm test
+
+To check the test coverage:
+
+    $ npm run coverage
+
+This will output a coverage report in `coverage/lcov-report/index.html`.
